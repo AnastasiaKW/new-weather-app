@@ -23,6 +23,7 @@
             <div class="row">
               <div class="col-9">
                 <input
+                  id="city-input"
                   type="search"
                   placeholder="Enter a city..."
                   class="form-control"
@@ -52,7 +53,10 @@
                 />
                 <div>
                   <strong id="temperature"></strong
-                  ><span class="units">°C |°F</span>
+                  ><span class="units"
+                    ><a href="#" id="celsius-link" class="active">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a></span
+                  >
                 </div>
               </div>
             </div>
