@@ -33,6 +33,9 @@ function displayTemperature(response) {
 
   celsiusTemperature = response.data.main.temp;
 
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -70,7 +73,7 @@ function displayFahrenheitTemperature(event) {
 function displaycelsiusTemperature(event) {
   event.preventDefault();
   celsiusLink.classList.add("active");
-  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.remove("active");
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
